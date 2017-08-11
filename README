@@ -1,0 +1,33 @@
+Team Members:
+Priyanka Ravi
+33246700
+priyanr1@uci.edu
+
+Sudharshan Arutselvan
+89979164
+sarutsel@uci.edu
+
+PARALLEL IMPLEMENTATION OF GOTOH ALGORITHM
+OpenMP
+
+To compile the program:
+
+gcc -std=c99 -O3 -fopenmp gotoh.c main.c -o align
+
+To run the OpenMP Gotoh Algorithm:
+
+If running in the HPC cluster run "qsub gotoh.sh"
+	This command runs the program 5 times and the number of cores can be changed in it.
+
+If running in another machine, run
+	./align sequence1.fasta sequence2.fasta
+
+CUDA
+Source files included in CUDA IMPLEMENTATION folder
+- Submit the job cuda.sh
+- sequence3.fasta and sequence4.fasta are the source sequence files, each of length 5520
+
+//Additional source file main6.cu attached
+Whereas main5.cu only has a blocked approach for 2*2 new computations per block, main6.cu is the generalized version to allow n*n computations.
+Compiles, runs. Minor error left to debug.
+
